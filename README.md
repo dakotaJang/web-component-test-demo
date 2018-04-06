@@ -1,4 +1,5 @@
 # Web Component Test Demo
+[![Build Status](https://travis-ci.org/dakotaJang/web-component-test-demo.svg?branch=master)](https://travis-ci.org/dakotaJang/web-component-test-demo)
 
 I have built a simple app using web components to demonstrate testing web components in a continuous integration environment. Continuous integration becomes very useful when there are more developers making frequent changes to the code.
 
