@@ -1,0 +1,16 @@
+/bower_components/
+/node_modules/
+
+# Config files
+/.vscode/
+
+# Build files
+dist/
+
+# Demo are not ready
+/demo/
+
+
+
+
+

@@ -1,0 +1,24 @@
+{
+  "name": "web-component-test-demo",
+  "version": "0.0.1",
+  "main": "none",
+  "scripts": {
+    "webpack": "webpack -d"
+  },
+  "dependencies": {
+    "webpack": "^4.2.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.8.1",
+    "webpack-cli": "^2.0.13"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "web component","test","typescript","polymer","WCT","Travis CI"
+  ],
+  "author": "Dakota Jang",
+  "license": "MIT"
+}

@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- "8.9.4"
+
+addons:
+  firefox: latest
+  chrome: stable
+cache:
+  directories:
+  - node_modules
+  - bower_components
+before_script:
+- npm install
+- npm install -g web-component-tester bower webpack
+- bower install
+
+script:
+- wct
