@@ -11,17 +11,17 @@ suite('dj-app', () => {
     element = document.createElement("dj-app");
   });
   test('is defined in customElements',() => {
-    assert.equal(!!customElements.get("dj-app"), true);
+    expect(!!customElements.get("dj-app")).to.be.eql(true);
   });
   test('check if the element have shadow root', () => {
-    assert.equal(!!element.shadowRoot, true);
+    expect(!!element.shadowRoot).to.be.eql(true);
   });
   test('check if the component fills the browser screen', () => {
     flush(()=>{
-      assert.equal(element.offsetHeight,window.innerHeight);
-      assert.equal(element.offsetWidth,window.innerWidth);
-      assert.equal(element.clientLeft,0);
-      assert.equal(element.offsetTop,0);
+      expect(element.offsetHeight).to.be.eql(window.innerHeight);
+      expect(element.offsetWidth).to.be.eql(window.innerWidth);
+      expect(element.clientLeft).to.be.eql(0);
+      expect(element.offsetTop).to.be.eql(0);
     });
   });
 });

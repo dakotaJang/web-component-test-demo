@@ -11,24 +11,24 @@ suite('dj-card', () => {
     element = document.createElement("dj-card");
   });
   test('is defined in customElements',() => {
-    assert.equal(!!customElements.get("dj-card"), true);
+    expect(!!customElements.get("dj-card")).to.be.eql(true);
   });
   test('check if the element have shadow root', () => {
-    assert.equal(!!element.shadowRoot, true);
+    expect(!!element.shadowRoot).to.be.eql(true);
   });
   test('test attribute change', () => {
     element.setAttribute('value','7');
-    assert.equal(element.getAttribute('value'), '7');
+    expect(element.getAttribute('value')).to.be.eql('7');
 
     let span = element.shadowRoot.querySelector('span');
-    assert.equal(span.innerHTML, '7');
+    expect(span.innerHTML).to.be.eql('7');
   });
   test('test select attribute and color change on click', () => {
     MockInteractions.tap(element);
     flush(()=>{
       let backgroundColor = window.getComputedStyle(element, null).getPropertyValue('background-color');
-      assert.equal(backgroundColor,"rgb(77, 199, 31)");
-      assert.equal(element.hasAttribute('selected'),true);
+      expect(backgroundColor).to.be.eql("rgb(77, 199, 31)");
+      expect(element.hasAttribute('selected')).to.be.eql(true);
     });
   });
 
@@ -36,15 +36,15 @@ suite('dj-card', () => {
     MockInteractions.tap(element);
     flush(()=>{
       let backgroundColor = window.getComputedStyle(element, null).getPropertyValue('background-color');
-      assert.equal(backgroundColor,"rgb(77, 199, 31)");
-      assert.equal(element.hasAttribute('selected'),true);
+      expect(backgroundColor).to.be.eql("rgb(77, 199, 31)");
+      expect(element.hasAttribute('selected')).to.be.eql(true);
     });
 
     MockInteractions.tap(element);
     flush(()=>{
       let backgroundColor = window.getComputedStyle(element, null).getPropertyValue('background-color');
-      assert.equal(backgroundColor,"rgb(255, 255, 255)");
-      assert.equal(element.hasAttribute('selected'),false);
+      expect(backgroundColor).to.be.eql("rgb(255, 255, 255)");
+      expect(element.hasAttribute('selected')).to.be.eql(false);
     });
   });
 });
