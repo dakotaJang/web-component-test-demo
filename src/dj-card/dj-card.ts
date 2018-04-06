@@ -1,4 +1,11 @@
 /**
+ * @license
+ * Copyright (c) 2018 Dakota Jang. All rights reserved.
+ * This code may only be used under the MIT license found
+ * at https://github.com/dakotaJang/web-component-test-demo/blob/master/LICENSE
+ * Author: Dakota Jang @dakotaJang
+ */
+/**
  * 1. card can hold a value
  * 2. card takes the user interactions:
  *    a. mouse events
