@@ -17,7 +17,12 @@
     "test": "test"
   },
   "keywords": [
-    "web component","test","typescript","polymer","WCT","Travis CI"
+    "web component",
+    "test",
+    "typescript",
+    "polymer",
+    "WCT",
+    "Travis CI"
   ],
   "author": "Dakota Jang",
   "license": "MIT"
