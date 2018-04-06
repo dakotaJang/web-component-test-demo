@@ -19,7 +19,6 @@ before_script:
 - npm install -g web-component-tester bower webpack
 - bower install
 - export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
 
 script:
 - xvfb-run wct
