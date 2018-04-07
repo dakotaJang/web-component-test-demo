@@ -6,7 +6,6 @@ node_js:
 sudo: required
 
 addons:
-  firefox: latest
   chrome: stable
 
 cache:
@@ -22,4 +21,4 @@ before_script:
 
 script:
 - npm run webpack
-- xvfb-run wct
+- xvfb-run wct -l chrome
