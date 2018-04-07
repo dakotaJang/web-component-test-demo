@@ -21,21 +21,21 @@ suite('dj-board', () => {
     });
   });
   test('add card', () => {
-    let card = document.createElement("dj-card");
-    element.appendChild(card);
-    let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
     flush(()=>{
+      let card = document.createElement("dj-card");
+      element.appendChild(card);
+      let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
       expect(slotElements.length).to.be.eql(1);
     });
   });
   test('add more cards', () => {
-    let numberOfCards = Math.ceil(Math.random()*10);
-    for (let i = 0; i < numberOfCards; i++) {
-      let card = document.createElement("dj-card");
-      element.appendChild(card);
-    }
-    let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
     flush(()=>{
+      let numberOfCards = Math.ceil(Math.random()*10);
+      for (let i = 0; i < numberOfCards; i++) {
+        let card = document.createElement("dj-card");
+        element.appendChild(card);
+      }
+      let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
       expect(slotElements.length).to.be.eql( numberOfCards);
     });
   });
