@@ -11,24 +11,16 @@ suite('dj-card', () => {
     element = document.createElement("dj-card");
   });
   test('is defined in customElements',() => {
-    flush(()=>{
-      expect(!!customElements.get("dj-card")).to.be.eql(true);
-    });
+    expect(!!customElements.get("dj-card")).to.be.eql(true);
   });
   test('check if the element have shadow root', () => {
-    flush(()=>{
-      expect(!!element.shadowRoot).to.be.eql(true);
-    });
+    expect(!!element.shadowRoot).to.be.eql(true);
   });
   test('test attribute change', () => {
-    flush(()=>{
-      element.setAttribute('value','7');
-      expect(element.getAttribute('value')).to.be.eql('7');
-    });
-    flush(()=>{
-      let span = element.shadowRoot.querySelector('span');
-      expect(span.innerHTML).to.be.eql('7');
-    });
+    element.setAttribute('value','7');
+    expect(element.getAttribute('value')).to.be.eql('7');
+    let span = element.shadowRoot.querySelector('span');
+    expect(span.innerHTML).to.be.eql('7');
   });
   test('test select attribute and color change on click', () => {
     MockInteractions.tap(element);
