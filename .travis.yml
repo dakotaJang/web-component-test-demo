@@ -21,4 +21,6 @@ before_script:
 - export DISPLAY=:99.0
 
 script:
+- npm run webpack
+- ls test
 - xvfb-run wct
