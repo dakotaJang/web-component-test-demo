@@ -11,32 +11,24 @@ suite('dj-board', () => {
     element = document.createElement("dj-board");
   });
   test('is defined in customElements',() => {
-    flush(()=>{
-      expect(!!customElements.get("dj-board")).to.be.eql(true);
-    });
+    expect(!!customElements.get("dj-board")).to.be.eql(true);
   });
   test('check if the element have shadow root', () => {
-    flush(()=>{
-      expect(!!element.shadowRoot).to.be.eql(true);
-    });
+    expect(!!element.shadowRoot).to.be.eql(true);
   });
   test('add card', () => {
-    flush(()=>{
-      let card = document.createElement("dj-card");
-      element.appendChild(card);
-      let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
-      expect(slotElements.length).to.be.eql(1);
-    });
+    let card = document.createElement("dj-card");
+    element.appendChild(card);
+    let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
+    expect(slotElements.length).to.be.eql(1);
   });
   test('add more cards', () => {
-    flush(()=>{
-      let numberOfCards = Math.ceil(Math.random()*10);
-      for (let i = 0; i < numberOfCards; i++) {
-        let card = document.createElement("dj-card");
-        element.appendChild(card);
-      }
-      let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
-      expect(slotElements.length).to.be.eql( numberOfCards);
-    });
+    let numberOfCards = Math.ceil(Math.random()*10);
+    for (let i = 0; i < numberOfCards; i++) {
+      let card = document.createElement("dj-card");
+      element.appendChild(card);
+    }
+    let slotElements = element.shadowRoot.querySelector('slot').assignedElements();
+    expect(slotElements.length).to.be.eql( numberOfCards);
   });
 });
