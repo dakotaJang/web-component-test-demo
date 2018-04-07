@@ -11,14 +11,10 @@ suite('dj-app', () => {
     element = document.createElement("dj-app");
   });
   test('is defined in customElements',() => {
-    flush(()=>{
-      expect(!!customElements.get("dj-app")).to.be.eql(true);
-    });
+    expect(!!customElements.get("dj-app")).to.be.eql(true);
   });
   test('check if the element have shadow root', () => {
-    flush(()=>{
-      expect(!!element.shadowRoot).to.be.eql(true);
-    });
+    expect(!!element.shadowRoot).to.be.eql(true);
   });
   test('check if the component fills the browser screen', () => {
     flush(()=>{
