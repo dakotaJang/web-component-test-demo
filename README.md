@@ -1,5 +1,4 @@
-# Web Component Test Demo
-[![Build Status](https://travis-ci.org/dakotaJang/web-component-test-demo.svg?branch=master)](https://travis-ci.org/dakotaJang/web-component-test-demo)
+# Web Component Test Demo [![Build Status](https://travis-ci.org/dakotaJang/web-component-test-demo.svg?branch=master)](https://travis-ci.org/dakotaJang/web-component-test-demo)
 
 Chrome [![Build Status](https://travis-ci.org/dakotaJang/web-component-test-demo.svg?branch=test-chrome)](https://travis-ci.org/dakotaJang/web-component-test-demo) - Firefox [![Build Status](https://travis-ci.org/dakotaJang/web-component-test-demo.svg?branch=test-firefox)](https://travis-ci.org/dakotaJang/web-component-test-demo)
 
