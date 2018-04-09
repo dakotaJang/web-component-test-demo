@@ -9,8 +9,7 @@ cache:
   - bower_components
 
 before_script:
-- npm install
-- npm install -g web-component-tester bower webpack typescript tslint
+- npm install -g typescript tslint
 
 script:
 - tslint -p .
