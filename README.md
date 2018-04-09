@@ -7,6 +7,6 @@ I have built a simple app using web components to demonstrate testing web compon
 This is a demo project to demonstrate some basic setup for using Travis CI and Polymer's Web Component Test (WCT).
 The web components are built using typescript which is compiled and packed using Webpack.
 
-The test will return the result from:
+The test will return the result for:
 - running the test in multiple browsers using the test written in ```/test/*.spec.js``` files.
 - run tslint for checking the lints in typescript files.
