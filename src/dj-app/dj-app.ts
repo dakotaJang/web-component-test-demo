@@ -1,10 +1,10 @@
 /**
- * @license
- * Copyright (c) 2018 Dakota Jang. All rights reserved.
- * This code may only be used under the MIT license found
- * at https://github.com/dakotaJang/web-component-test-demo/blob/master/LICENSE
- * Author: Dakota Jang @dakotaJang
- */
+* @license
+* Copyright (c) 2018 Dakota Jang. All rights reserved.
+* This code may only be used under the MIT license found
+* at https://github.com/dakotaJang/web-component-test-demo/blob/master/LICENSE
+* Author: Dakota Jang @dakotaJang
+*/
 
 /**
  * 1. app takes the entire screen of the browser
@@ -17,13 +17,13 @@
  *    b. menu
  */
 
-import "../dj-board/dj-board";
+import "../dj-board/dj-board"
 import "../dj-card/dj-card";
 
-class DjApp extends HTMLElement {
-  constructor() {
+class DjApp extends HTMLElement{
+  constructor(){
     super();
-    this.attachShadow({mode: "open"});
+    this.attachShadow({mode: "open"})
     this.shadowRoot.innerHTML = `
       <style>
         :host{
@@ -38,7 +38,7 @@ class DjApp extends HTMLElement {
       <slot name="main"></slot>
       <slot name="menu"></slot>
       <dj-board></dj-board>
-    `;
+    `
   }
 }
-customElements.define("dj-app", DjApp);
+customElements.define("dj-app",DjApp);
