@@ -17,10 +17,11 @@ before_script:
 - git clone --depth=50 --branch=master https://github.com/dakotaJang/web-component-test-demo.git repo
 - cd repo
 - npm install
-- npm install -g web-component-tester bower webpack
+- npm install -g web-component-tester bower webpack typescript tslint
 - bower install
 - export DISPLAY=:99.0
 
 script:
+- tslint -p .
 - npm run webpack
 - xvfb-run wct -l firefox
