@@ -3,24 +3,13 @@ language: node_js
 node_js:
 - "8.9.4"
 
-sudo: required
-
-addons:
-  chrome: stable
-
 cache:
   directories:
   - node_modules
   - bower_components
 
 before_script:
-- git clone --depth=50 --branch=master https://github.com/dakotaJang/web-component-test-demo.git repo
-- cd repo
-- npm install
-- npm install -g web-component-tester bower webpack
-- bower install
-- export DISPLAY=:99.0
+- npm install -g typescript tslint
 
 script:
-- npm run webpack
-- xvfb-run wct -l chrome
+- tslint -p .
