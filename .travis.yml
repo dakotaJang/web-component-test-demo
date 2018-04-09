@@ -9,6 +9,8 @@ cache:
   - bower_components
 
 before_script:
+- git clone --depth=50 --branch=master https://github.com/dakotaJang/web-component-test-demo.git repo
+- cd repo
 - npm install -g typescript tslint
 
 script:
